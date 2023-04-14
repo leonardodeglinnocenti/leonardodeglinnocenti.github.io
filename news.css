@@ -1,10 +1,8 @@
 .title-bar {
     display: flex;
-    grid-template-columns: repeat(3, 1fr);
     margin: auto;
     align-items: center;
     align-content: center;
-    justify-content: space-between;
     overflow: hidden;
     padding: 20px 20px 11px;
 }
@@ -83,10 +81,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 3px rgba(0,0,0,.4);
+    box-shadow: 0 2px 3px rgba(0,0,0,.4); /* Adds a discrete shadow under the navbar */
 }
 
-.navbar.sticky {
+.navbar.sticky { /* Combined with navbar_always_visible.js allows the navbar to always be visible when scrolling */
     position: fixed;
     top: 0;
     width: 100%;
