@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta title="Make It Shine">
+    <meta description="This is a website for a news agency.">
+    <title>Make It Shine</title>
+    <link rel="stylesheet" href="news.css">
+    <script src="navbar_always_visible.js" defer></script>
+    <script src="mobile-menu.js"></script>
+<!-- 'defer' is used to wait for the completion of the loading procedures of the page */-->
+</head>
+<body>
+<div class="top">
+    <div class = 'title-bar'>
+        <div class = "mobile-menu" id = "mobile-menu" onclick="openMobileNavbar()">
+            <img src="/images/mobile_menu_icon.svg">
+        </div>
+        <div class = 'fill'></div>
+        <div class = 'logo'>
+            <img src="/images/logo.png" alt="This image hasn't been uploaded yet." width="478" height="auto">
+        </div>
+        <div class = 'users-menu actions'>
+            <ul class = 'icon'>
+                <li class = 'icon'>
+                    <img src="/images/mail.svg">
+                </li>
+            </ul>
+            <ul class = 'users-menu' style="margin-right: 4em">
+                <li class = 'plain-button'>
+                    <a href="#">Subscribe</a>
+                </li>
+                <li class = 'menu-button'>
+                    <a href="#">Sign In</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <nav class = 'navbar' id = 'navbar'>
+        <ul class = 'main-menu'>
+            <li class = 'main-menu-item'><a href="#">News</a>
+                <ul class = 'dropdown-menu'>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Corrections</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Politics</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">National</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Putin's war in Ukraine</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Business & Economy</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Security</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Culture</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Entertainment</a>
+                    </li>
+                </ul>
+            </li>
+            <li class = 'main-menu-item'><a href="#">Policy</a>
+                <ul class = 'dropdown-menu'>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Ranking is hard</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Extremely long title with complex text</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Doped algorithms</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Internet of Things</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">TV Series are getting worse</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Cryptography is key</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Theatre & Cinema</a>
+                    </li>
+                </ul>
+            </li>
+            <li class = 'main-menu-item'><a href="#">Commentary</a>
+                <ul class = 'dropdown-menu'>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Harold Finch</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Saul Goodman</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Gary Oldman</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">John Reese</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Rowan Atkinson</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">John Cleese</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Basil Fawlty</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Prunella Scales</a>
+                    </li>
+                </ul>
+            <li class = 'main-menu-item'><a href="#">Sports</a>
+                <ul class = 'dropdown-menu'>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Corrections</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Politics</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">National</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Putin's war in Ukraine</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Business & Economy</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Security</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Culture</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Entertainment</a>
+                    </li>
+                </ul>
+            <li class = 'main-menu-item'><a href="#">Sponsored</a>
+                <ul class = 'dropdown-menu'>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Corrections</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Politics</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">National</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Putin's war in Ukraine</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Business & Economy</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Security</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Culture</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Entertainment</a>
+                    </li>
+                </ul>
+            <li class = 'main-menu-item'><a href="#">Events</a>
+                <ul class = 'dropdown-menu'>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Corrections</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Politics</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">National</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Putin's war in Ukraine</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Business & Economy</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Security</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Culture</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Entertainment</a>
+                    </li>
+                </ul>
+            <li class = 'main-menu-item'><a href="#">Podcasts</a>
+                <ul class = 'dropdown-menu'>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Corrections</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Politics</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">National</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Putin's war in Ukraine</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Business & Economy</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Security</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Culture</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Entertainment</a>
+                    </li>
+                </ul>
+            <li class = 'main-menu-item'><a href="#">Games</a>
+                <ul class = 'dropdown-menu'>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Corrections</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Politics</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">National</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Putin's war in Ukraine</a>
+                    </li>
+                    <li class = 'dropdown-item'>
+                        <a href="#">Business & Economy</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Security</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Culture</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="#">Entertainment</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="mobile-navbar-wrapper" id="mobile-navbar-wrapper">
+        <nav class = 'mobile-navbar' id = 'mobile-navbar'>
+            <ul class = 'mobile-main-menu'>
+                <li class = 'mobile-main-menu-item'><a href="#">News</a>
+                    <ul class = 'mobile-dropdown-menu'>
+                        <li class = 'mobile-dropdown-item'>
+                            <a href="#">Corrections</a>
+                        </li>
+                        <li class = 'mobile-dropdown-item'>
+                            <a href="#">Politics</a>
+                        </li>
+                        <li class = 'mobile-dropdown-item'>
+                            <a href="#">National</a>
+                        </li>
+                        <li class = 'mobile-dropdown-item'>
+                            <a href="#">Putin's war in Ukraine</a>
+                        </li>
+                        <li class = 'mobile-dropdown-item'>
+                            <a href="#">Business & Economy</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Security</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href = "#">Culture</a>
+                        </li>
+                        <li class="mobile-dropdown-item">
+                            <a href="#">Entertainment</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class = 'mobile-main-menu-item'><a href="#">Policy</a>
+                    <ul class = 'mobile-dropdown-menu'>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Ranking is hard</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Extremely long title with complex text</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Doped algorithms</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Internet of Things</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">TV Series are getting worse</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Cryptography is key</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Theatre & Cinema</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class = 'mobile-main-menu-item'><a href="#">Commentary</a>
+                    <ul class = 'mobile-dropdown-menu'>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Harold Finch</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Saul Goodman</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Gary Oldman</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">John Reese</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Rowan Atkinson</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">John Cleese</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Basil Fawlty</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Prunella Scales</a>
+                        </li>
+                    </ul>
+                <li class = 'mobile-main-menu-item'><a href="#">Sports</a>
+                    <ul class = 'mobile-dropdown-menu'>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Corrections</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Politics</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">National</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Putin's war in Ukraine</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Business & Economy</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Security</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Culture</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Entertainment</a>
+                        </li>
+                    </ul>
+                <li class = 'mobile-main-menu-item'><a href="#">Sponsored</a>
+                    <ul class = "mobile-dropdown-item">
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Corrections</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Politics</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">National</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Putin's war in Ukraine</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Business & Economy</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Security</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Culture</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Entertainment</a>
+                        </li>
+                    </ul>
+                <li class = 'mobile-main-menu-item'><a href="#">Events</a>
+                    <ul class = 'mobile-dropdown-menu'>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Corrections</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Politics</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">National</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Putin's war in Ukraine</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Business & Economy</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Security</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Culture</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Entertainment</a>
+                        </li>
+                    </ul>
+                <li class = 'mobile-main-menu-item'><a href="#">Podcasts</a>
+                    <ul class = "mobile-dropdown-item">
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Corrections</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Politics</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">National</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Putin's war in Ukraine</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Business & Economy</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Security</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Culture</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Entertainment</a>
+                        </li>
+                    </ul>
+                <li class = 'mobile-main-menu-item'><a href="#">Games</a>
+                    <ul class = 'mobile-dropdown-menu'>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Corrections</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Politics</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">National</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Putin's war in Ukraine</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Business & Economy</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Security</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Culture</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Entertainment</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="separator"></div>
+    <div class="podcasts-wrapper">
+        <div class="podcast-element">
+            <div class="podcast-image">
+                <img src="/images/podcast01.png" alt="This image hasn't been uploaded yet." width="65" height="65">
+            </div>
+            <div class="podcast-title"> <a href="#"> The Daily </a> </div>
+            <div class="podcast-description"> The Daily is a news podcast hosted by Saul Goodman. Special guests join him every Saturday, so stay tuned! </div>
+        </div>
+        <div class="podcast-element">
+            <div class="podcast-image">
+                <img src="/images/podcast01.png" alt="This image hasn't been uploaded yet." width="65" height="65">
+            </div>
+            <div class="podcast-title"> <a href="#"> Mr. Show </a> </div>
+            <div class="podcast-description"> Mr. Show was a TV-Series created by David Cross and Bob Odenkirk in 1999. </div>
+        </div>
+        <div class="podcast-element">
+            <div class="podcast-image">
+                <img src="/images/podcast01.png" alt="This image hasn't been uploaded yet." width="65" height="65">
+            </div>
+            <div class="podcast-title"> <a href="#"> 610 Sei Uno Zero </a> </div>
+            <div class="podcast-description"> 610 Sei Uno Zero is an Italian radio show hosted by Lillo & Greg. </div>
+        </div>
+    </div>
+    <div class="separator"></div>
+    <div class="trending">
+        <div> <strong> TRENDING: </strong> </div>
+        <div> <a href="#"> CHINA </a> </div>
+        <div> <a href="#"> UKRAINE </a> </div>
+        <div> <a href="#"> SAUL GOODMAN </a> </div>
+        <div> <a href="#"> JOHN CLEESE </a> </div>
+        <div> <a href="#"> GREY HOUSE </a> </div>
+        <div> <a href="#"> BORIS JOHNSON </a> </div>
+    </div>
+
+</div>
+
+    <img class = 'logo' src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/300px-Wikipedia-logo-v2.svg.png" alt="This image hasn't been uploaded yet.">
+
+
+    <div class = "filler">
+
+    </div>
+
+
+</body>
+</html>

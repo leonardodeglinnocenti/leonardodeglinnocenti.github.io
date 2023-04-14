@@ -1,0 +1,254 @@
+.title-bar {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 20px 20px 11px;
+}
+
+.fill {
+    flex: 1;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.users-menu {
+    display: inline-flex;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: right;
+    /*Remove bullet points*/
+    list-style-type: none;
+}
+
+.title-bar .actions {
+    flex: 1;
+}
+
+.icon {
+    margin-right: 1vw;
+    align-items: center;
+    /*Remove bullet points*/
+    list-style-type: none;
+}
+
+.plain-button {
+    background-color: black;
+    padding: 3px 10px;
+    font-size: 16px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.plain-button a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: Arial,sans-serif;
+}
+
+.menu-button {
+    font-size: 16px;
+    padding: 3px 10px;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.menu-button a {
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: Arial,sans-serif;
+}
+
+.navbar{
+    display: flex;
+    background-color: #a9091f;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 60px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 3px rgba(0,0,0,.4);
+}
+
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.main-menu-item{
+    display: inline-flex;
+    position: relative;
+    font-size: 25px;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.main-menu-item a{
+    text-decoration: none;
+    color: white; /* Main menu items color */
+    display: inline-flex;
+    padding: 0;
+}
+
+.dropdown-menu{
+    display: none;
+}
+
+.main-menu-item:hover .dropdown-menu{
+    display: block;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 215px; /* Width of the dropdown menu */
+    top: 62px; /* Dropdown menu must stay under the navbar */
+    z-index: 0;
+    background: white;
+    box-shadow: 1px 1px 1px 1px grey;
+    padding: 3px 3px 3px 3px; /* Dimensions for the dropdown menu items (3rd dimension is height) */
+    list-style: none;
+}
+
+.dropdown-menu a{
+    display: block;
+    color: black;
+    font-size: 18px;
+    font-family: Signika,sans-serif;
+    white-space: normal; /* Makes text wrapped within dropdown menu*/
+    /*font-weight: bold;*/
+    padding: 8px 24px;
+    border: none;
+    text-decoration: none;
+    text-align: left;
+}
+
+.dropdown-item:hover{
+    background: #a9091f;
+    transition: background-color .1s;
+}
+
+.dropdown-item:hover a{
+    color: lightgray;
+    transition: color .1s;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+.mobile-navbar{
+    display: none;
+    margin-top: -200vh;
+    z-index: -1;
+    background-color: #a9091f;
+}
+
+.showMobileNavbar {
+    display: flex;
+    margin-top: 0;
+    z-index: -1;
+}
+
+.separator{
+    border-bottom: 1px solid grey;
+}
+
+.podcasts-wrapper{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.podcast-element{
+    flex: 1; /* The same size is assigned to every element. */
+    padding: 10px 15px 1px;
+}
+
+.podcast-image{
+    float: left;
+    margin-right: 15px;
+}
+
+.podcast-title{
+    align-content: flex-start;
+}
+
+.podcast-title a{
+    font-size: 15px;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.podcast-description{
+    font-size: 13px;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+}
+
+.trending{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+
+.trending a{
+    text-decoration: none;
+    color: black; /* Main menu items color */
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 1px solid black;
+}
+
+.trending a:hover{
+    /* Underlines text when mouse is hovering */
+    text-decoration: revert;
+}
+
+.trending div:nth-child(2) a {
+    border-left: none;
+}
+
+.filler {
+    height: 3000000px;
+}
+
+/* Hide navbar for small screens */
+@media screen and (max-width: 1200px) {
+    .navbar {
+        display: none;
+    }
+    .mobile-menu {
+        display: flex;
+    }
+}
