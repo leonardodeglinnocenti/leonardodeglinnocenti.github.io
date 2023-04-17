@@ -76,10 +76,11 @@
     display: none;
 }
 
-.users-menu:hover .menu-button-dropdown{ /*TODO: fix this!*/
+.users-menu:hover .menu-button-dropdown{
     display: block;
     position: absolute;
-    top: 88px;
+    top: 73px; /*Element is positioned below the user menu*/
+    right: 91px;
     width: 200px; /* Width of the dropdown menu */
     z-index: 9999999; /*Moves the element in the foreground*/
     background: black;
@@ -215,7 +216,7 @@
 .mobile-navbar-wrapper a{
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 23px;
     font-family: Signika,Helmet,Freesans,sans-serif;
 }
 
@@ -228,7 +229,7 @@
     align-items: center;
     vertical-align: center; /*Makes the menu stay in the middle when expanding menus*/
     position: fixed;
-    /*overflow-y: scroll;*/ /*Makes the menu scrollable*/
+    overflow-y: scroll; /*Makes the menu scrollable*/
     top: 0;
     bottom: 0;
     left: 0;
@@ -237,7 +238,7 @@
 
 .mobile-main-menu-item{
     /*Make menu stay at the center of the screen*/
-    display: flex; /*TODO*/
+    display: flex;
     flex-direction: column;
     padding: 10px 0 10px 0;
     /*Remove bullet points from lists*/
@@ -264,7 +265,7 @@
 }
 
 .mobile-dropdown-menu a{
-    font-size: 14px;
+    font-size: 17px;
 }
 
 .mobile-dropdown-menu ul {
@@ -460,7 +461,6 @@
 }
 
 .recent-news article{
-    flex-direction: row;
     margin-bottom: 1em;
 }
 
@@ -482,6 +482,82 @@
     text-decoration: underline;
 }
 
+.news-section{
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+    padding: 1em;
+    border-top: 8px solid lightgray;
+}
+
+.news-section-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news-section-title-wrapper{
+    display: block;
+    width: 90%;
+}
+
+.news-section-title h2{
+    float: left;
+    width: fit-content;
+    margin-right: 10px;
+    font-size: 27px;
+    font-family: Montserrat,Helmet,Freesans,sans-serif;
+    font-style: normal;
+    font-weight: 12000;
+    color: #b00021;
+}
+
+.ribbon{
+    background-color: #b00021;
+    content: "";
+    overflow: hidden;
+    height: 1px;
+    margin-top: 38px; /*Align decoration element with the title*/
+    margin-right: 70px;
+}
+
+.view-all-button{
+    white-space: nowrap; /*Force text to stay on one line*/
+    font-size: 15px;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #b00021;
+}
+
+.view-all-button a{
+    font-size: 15px;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: black;
+    text-decoration-line: none;
+}
+
+.view-all-button a:hover{
+    text-decoration: underline;
+}
+
+.news-section article{
+    margin-bottom: 1em;
+}
+
+.news-section img{
+    float: left;
+    margin-right: 1em;
+}
+
+.news-section article:nth-child(2) img{
+    width: 200px;
+    height: 100px;
+}
+
 .meta{
     margin-top: 1em;
     font-size: 15px;
@@ -500,13 +576,53 @@
     font-style: italic;
 }
 
-
-.aside-right{
+.aside-right {
     grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.aside-right article{
+    margin-bottom: 1em;
+}
+
+.aside-right img{
+    float: left;
+    margin-right: 1em;
+}
+
+.aside-article-title a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.aside-article-title a:hover{
+    text-decoration: underline;
+}
+
+.category{
+    display: flex;
+    flex-direction: column;
+    border-bottom: lightgray 1px solid;
+}
+
+.category-title-wrapper h2{
+    padding: 10px 0 10px 20px;
+    background-color: #9ea7b3;
+    font-size: 20px;
+    font-family: Montserrat,Helmet,Freesans,sans-serif;
+    font-style: normal;
+    font-weight: 12000;
+    color: white;
 }
 
 .filler {
-    height: 3000000px;
+    height: 10px;
 }
 /* Hide navbar for small screens */
 @media screen and (max-width: 1000px) { /*This breakpoint avoids navbar to be shown on two lines*/
@@ -518,6 +634,12 @@
     }
     .content-wrapper {
         width: 100%;
+    }
+    .users-menu {
+        display: none;
+    }
+    .fill{ /*Allows the logo to be centered again*/
+        display: none;
     }
 }
 @media screen and (min-width: 1000px) { /*Close mobile menu when enlarging window*/
