@@ -40,7 +40,7 @@
 .plain-button {
     background-color: black;
     padding: 3px 10px;
-    font-size: 16px;
+    font-size: 21px;
     border-top: 1px solid;
     border-bottom: 1px solid;
     border-left: 1px solid;
@@ -56,7 +56,7 @@
 }
 
 .menu-button {
-    font-size: 16px;
+    font-size: 21px;
     padding: 3px 10px;
     border-right: 1px solid;
     border-bottom: 1px solid;
@@ -72,15 +72,46 @@
     font-family: Arial,sans-serif;
 }
 
+.menu-button-dropdown {
+    display: none;
+}
+
+.users-menu:hover .menu-button-dropdown{ /*TODO: fix this!*/
+    display: block;
+    position: absolute;
+    top: 88px;
+    width: 200px; /* Width of the dropdown menu */
+    z-index: 9999999; /*Moves the element in the foreground*/
+    background: black;
+    padding: 0; /*Avoid padding inheritance*/
+    /*Remove bullet points from lists*/
+    list-style-type: none;
+    border: 1px solid white;
+}
+
+.menu-button-dropdown a {
+    display: block;
+    color: white;
+    font-size: 17px;
+    font-family: Signika,sans-serif;
+    white-space: normal; /* Makes text wrapped within dropdown menu*/
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    text-align: right;
+    padding: 8px 24px;
+}
+
+.menu-button-dropdown-item:hover {
+    background: #a9091f;
+    transition: background-color .1s;
+}
+
 .navbar{
-    display: flex;
     background-color: #a9091f;
     width: 100%;
     margin-bottom: 10px;
-    height: 60px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    height: max-content;
     box-shadow: 0 2px 3px rgba(0,0,0,.4); /* Adds a discrete shadow under the navbar */
 }
 
@@ -88,6 +119,19 @@
     position: fixed;
     top: 0;
     width: 100%;
+}
+
+.main-menu{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    /*Remove bullet points from lists*/
+    list-style-type: none;
 }
 
 .main-menu-item{
@@ -106,7 +150,6 @@
 .main-menu-item a{
     text-decoration: none;
     color: white; /* Main menu items color */
-    display: inline-flex;
     padding: 0;
 }
 
@@ -116,16 +159,15 @@
 
 .main-menu-item:hover .dropdown-menu{
     display: block;
-    flex-direction: column;
-    flex-wrap: wrap;
     position: absolute;
     width: 215px; /* Width of the dropdown menu */
     top: 62px; /* Dropdown menu must stay under the navbar */
-    z-index: 0;
+    z-index: 99999; /*Moves this element in the foreground*/
     background: white;
     box-shadow: 1px 1px 1px 1px grey;
     padding: 3px 3px 3px 3px; /* Dimensions for the dropdown menu items (3rd dimension is height) */
-    list-style: none;
+    /*Remove bullet points from lists*/
+    list-style-type: none;
 }
 
 .dropdown-menu a{
@@ -155,11 +197,89 @@
     display: none;
 }
 
+.mobile-menu-close{
+    display: none;
+}
+
+.mobile-menu-close-visible{
+    display: flex;
+    position: absolute;
+    z-index: 9999999; /*Object is moved in the foreground*/
+}
+
+.mobile-navbar-wrapper{
+    display: none;
+    z-index: 1;
+}
+
+.mobile-navbar-wrapper a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+}
+
+.mobile-navbar-wrapper-open{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #a9091f;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center; /*Makes the menu stay in the middle when expanding menus*/
+    position: fixed;
+    /*overflow-y: scroll;*/ /*Makes the menu scrollable*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.mobile-main-menu-item{
+    /*Make menu stay at the center of the screen*/
+    display: flex; /*TODO*/
+    flex-direction: column;
+    padding: 10px 0 10px 0;
+    /*Remove bullet points from lists*/
+    list-style-type: none;
+    /*Add border to the bottom of the menu item*/
+    border-bottom: 1px solid #7d1624;
+    width: 260px;
+    /*Extend border-bottom to the whole extent of the screen*/
+}
+
+.mobile-dropdown-menu{
+    display: none;
+    /*Remove bullet points from lists*/
+    list-style-type: none;
+}
+
+.mobile-main-menu-item:hover .mobile-dropdown-menu{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: left;
+    margin-top: 0.5em;
+}
+
+.mobile-dropdown-menu a{
+    font-size: 14px;
+}
+
+.mobile-dropdown-menu ul {
+    width: 100%;
+}
+
+.mobile-dropdown-menu a:hover{
+    color: lightgray;
+    text-decoration: underline;
+}
+
 .mobile-navbar{
     display: none;
     margin-top: -200vh;
-    z-index: -1;
-    background-color: #a9091f;
+    z-index: 2;
 }
 
 .showMobileNavbar {
@@ -180,7 +300,6 @@
     padding-top: 1em;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
 }
 
 .podcast-element{
@@ -203,18 +322,21 @@
     font-weight: bold;
     text-decoration: none;
     color: black;
+    line-height: 1.3;
 }
 
 .podcast-description{
     font-size: 13px;
     font-family: Signika,Helmet,Freesans,sans-serif;
+    line-height: 1.3;
 }
 
 .trending{
     display: flex;
+    /*Overflow must trigger elements to go on more than one line*/
+    flex-wrap: wrap;
     width: 100%;
     height: 60px;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-left: auto;
@@ -226,6 +348,8 @@
     padding-left: 10px;
     padding-right: 10px;
     border-left: 1px solid black;
+    /*Force text on one line*/
+    white-space: nowrap;
 }
 
 .trending a:hover{
@@ -237,16 +361,170 @@
     border-left: none;
 }
 
+.content-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    margin: 2em auto 2em auto;
+    width: 90%; /*Adds margin*/
+}
+
+.aside-left {
+    grid-column: 1;
+    padding: 1em;
+    border-right: grey 1px solid;
+}
+
+.aside-left article{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1em;
+}
+
+.aside-left img{
+    margin-right: 1em;
+}
+
+.aside-left a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.aside-left a:hover{
+    text-decoration: underline;
+}
+
+.sponsored-content{
+    margin-top: 2em;
+    color: #a9091f;
+    font-size: 20px;
+    font-family: Signika, Helmet, Freesans, sans-serif;
+    font-weight: bold;
+}
+
+.sponsored-article{
+    padding: 1em;
+    background-color: #e7e7e7;
+}
+
+.subscriber-only-tag{
+    display: none;
+}
+
+.middle{
+    grid-column: 2;
+    padding: 1em;
+    border-right: grey 1px solid;
+}
+
+.breaking-news article{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.breaking-news img{
+    width: 100%;
+    height: auto;
+}
+
+.breaking-article-title a{
+    text-decoration: none;
+    color: black;
+    font-size: 35px;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.breaking-article-title a:hover{
+    text-decoration: underline;
+}
+
+.breaking-news p{
+    font-size: 20px;
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.recent-news {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+    padding: 1em;
+    border-top: 8px solid lightgray;
+}
+
+.recent-news article{
+    flex-direction: row;
+    margin-bottom: 1em;
+}
+
+.recent-news img{
+    float: left;
+    margin-right: 1em;
+}
+
+.recent-article-title a{
+    text-decoration: none;
+    color: black;
+    font-size: 23px;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.recent-article-title a:hover{
+    text-decoration: underline;
+}
+
+.meta{
+    margin-top: 1em;
+    font-size: 15px;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+}
+
+.author{
+    color: #015fb6;
+}
+
+.author:hover{
+    text-decoration: underline;
+}
+
+.publisher {
+    font-style: italic;
+}
+
+
+.aside-right{
+    grid-column: 3;
+}
+
 .filler {
     height: 3000000px;
 }
-
 /* Hide navbar for small screens */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) { /*This breakpoint avoids navbar to be shown on two lines*/
     .navbar {
         display: none;
     }
     .mobile-menu {
         display: flex;
+    }
+    .content-wrapper {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1000px) { /*Close mobile menu when enlarging window*/
+    .mobile-navbar {
+        display: none;
+    }
+    .mobile-navbar-wrapper {
+        display: none;
     }
 }

@@ -13,8 +13,11 @@
 <body>
 <div class="top">
     <div class = 'title-bar'>
-        <div class = "mobile-menu" id = "mobile-menu" onclick="openMobileNavbar()">
-            <img src="/images/mobile_menu_icon.svg">
+        <div class = "mobile-menu" id = "mobile-menu" onclick="toggleMobileNavbar()">
+            <img src="/images/open_mobile_menu_icon.svg" alt="This image hasn't been uploaded yet.">
+        </div>
+        <div class = "mobile-menu-close" id = "mobile-menu-close" onclick="toggleMobileNavbar()">
+            <img src="/images/close_mobile_menu_icon.svg" alt="This image hasn't been uploaded yet.">
         </div>
         <div class = 'fill'></div>
         <div class = 'logo'>
@@ -23,7 +26,7 @@
         <div class = 'users-menu actions'>
             <ul class = 'icon'>
                 <li class = 'icon'>
-                    <img src="/images/mail.svg">
+                    <img src="/images/mail.svg" alt="This image hasn't been uploaded yet.">
                 </li>
             </ul>
             <ul class = 'users-menu' style="margin-right: 4em">
@@ -33,6 +36,20 @@
                 <li class = 'menu-button'>
                     <a href="#">Sign In</a>
                 </li>
+                <ul class="menu-button-dropdown">
+                    <li class = 'menu-button-dropdown-item'>
+                        <a href="#">Sign In</a>
+                    </li>
+                    <li class = 'menu-button-dropdown-item'>
+                        <a href="#">Register</a>
+                    </li>
+                    <li class = 'menu-button-dropdown-item'>
+                        <a href="#">Hack White House</a>
+                    </li>
+                    <li class = 'menu-button-dropdown-item'>
+                        <a href="#">Destroy Internet</a>
+                    </li>
+                </ul>
             </ul>
         </div>
     </div>
@@ -118,6 +135,7 @@
                         <a href="#">Prunella Scales</a>
                     </li>
                 </ul>
+            </li>
             <li class = 'main-menu-item'><a href="#">Sports</a>
                 <ul class = 'dropdown-menu'>
                     <li class = 'dropdown-item'>
@@ -145,6 +163,7 @@
                         <a href="#">Entertainment</a>
                     </li>
                 </ul>
+            </li>
             <li class = 'main-menu-item'><a href="#">Sponsored</a>
                 <ul class = 'dropdown-menu'>
                     <li class = 'dropdown-item'>
@@ -172,6 +191,7 @@
                         <a href="#">Entertainment</a>
                     </li>
                 </ul>
+        </li>
             <li class = 'main-menu-item'><a href="#">Events</a>
                 <ul class = 'dropdown-menu'>
                     <li class = 'dropdown-item'>
@@ -199,6 +219,7 @@
                         <a href="#">Entertainment</a>
                     </li>
                 </ul>
+            </li>
             <li class = 'main-menu-item'><a href="#">Podcasts</a>
                 <ul class = 'dropdown-menu'>
                     <li class = 'dropdown-item'>
@@ -226,6 +247,7 @@
                         <a href="#">Entertainment</a>
                     </li>
                 </ul>
+            </li>
             <li class = 'main-menu-item'><a href="#">Games</a>
                 <ul class = 'dropdown-menu'>
                     <li class = 'dropdown-item'>
@@ -257,6 +279,7 @@
         </ul>
     </nav>
 
+    <!-- TODO: Make this div disappear when window is enlarged */ -->
     <div class="mobile-navbar-wrapper" id="mobile-navbar-wrapper">
         <nav class = 'mobile-navbar' id = 'mobile-navbar'>
             <ul class = 'mobile-main-menu'>
@@ -283,7 +306,7 @@
                         <li class = "mobile-dropdown-item">
                             <a href = "#">Culture</a>
                         </li>
-                        <li class="mobile-dropdown-item">
+                        <li class = "mobile-dropdown-item">
                             <a href="#">Entertainment</a>
                         </li>
                     </ul>
@@ -316,7 +339,13 @@
                 <li class = 'mobile-main-menu-item'><a href="#">Commentary</a>
                     <ul class = 'mobile-dropdown-menu'>
                         <li class = "mobile-dropdown-item">
+                            <a href="#">Linus Tornvalds</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
                             <a href="#">Harold Finch</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Valerio Lundini</a>
                         </li>
                         <li class = "mobile-dropdown-item">
                             <a href="#">Saul Goodman</a>
@@ -337,9 +366,55 @@
                             <a href="#">Basil Fawlty</a>
                         </li>
                         <li class = "mobile-dropdown-item">
-                            <a href="#">Prunella Scales</a>
+                            <a href="#">Alberto Sordi</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Leonardo Degl'Innocenti</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Flavio Aquilone</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Pink Floyd</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Fulminacci</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Walter White</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Jesse Pinkman</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Tim Berners Lee</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Corrado Guzzanti</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Caterina Guzzanti</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Lillo Petrolo</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Claudio "Greg" Gregori</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Gary Oldman</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Christoph Waltz</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Martin Scorsese</a>
+                        </li>
+                        <li class = "mobile-dropdown-item">
+                            <a href="#">Quentin Tarantino</a>
                         </li>
                     </ul>
+                </li>
                 <li class = 'mobile-main-menu-item'><a href="#">Sports</a>
                     <ul class = 'mobile-dropdown-menu'>
                         <li class = "mobile-dropdown-item">
@@ -367,33 +442,35 @@
                             <a href="#">Entertainment</a>
                         </li>
                     </ul>
+                </li>
                 <li class = 'mobile-main-menu-item'><a href="#">Sponsored</a>
-                    <ul class = "mobile-dropdown-item">
-                        <li class = "mobile-dropdown-item">
+                    <ul class = 'mobile-dropdown-menu'>
+                        <li class = 'mobile-dropdown-item'>
                             <a href="#">Corrections</a>
                         </li>
-                        <li class = "mobile-dropdown-item">
+                        <li class = 'mobile-dropdown-item'>
                             <a href="#">Politics</a>
                         </li>
-                        <li class = "mobile-dropdown-item">
+                        <li class = 'mobile-dropdown-item'>
                             <a href="#">National</a>
                         </li>
-                        <li class = "mobile-dropdown-item">
+                        <li class = 'mobile-dropdown-item'>
                             <a href="#">Putin's war in Ukraine</a>
                         </li>
-                        <li class = "mobile-dropdown-item">
+                        <li class = 'mobile-dropdown-item'>
                             <a href="#">Business & Economy</a>
                         </li>
-                        <li class = "mobile-dropdown-item">
+                        <li class="mobile-dropdown-item">
                             <a href="#">Security</a>
                         </li>
-                        <li class = "mobile-dropdown-item">
+                        <li class="mobile-dropdown-item">
                             <a href="#">Culture</a>
                         </li>
-                        <li class = "mobile-dropdown-item">
+                        <li class="mobile-dropdown-item">
                             <a href="#">Entertainment</a>
                         </li>
                     </ul>
+                </li>
                 <li class = 'mobile-main-menu-item'><a href="#">Events</a>
                     <ul class = 'mobile-dropdown-menu'>
                         <li class = "mobile-dropdown-item">
@@ -421,33 +498,7 @@
                             <a href="#">Entertainment</a>
                         </li>
                     </ul>
-                <li class = 'mobile-main-menu-item'><a href="#">Podcasts</a>
-                    <ul class = "mobile-dropdown-item">
-                        <li class = "mobile-dropdown-item">
-                            <a href="#">Corrections</a>
-                        </li>
-                        <li class = "mobile-dropdown-item">
-                            <a href="#">Politics</a>
-                        </li>
-                        <li class = "mobile-dropdown-item">
-                            <a href="#">National</a>
-                        </li>
-                        <li class = "mobile-dropdown-item">
-                            <a href="#">Putin's war in Ukraine</a>
-                        </li>
-                        <li class = "mobile-dropdown-item">
-                            <a href="#">Business & Economy</a>
-                        </li>
-                        <li class = "mobile-dropdown-item">
-                            <a href="#">Security</a>
-                        </li>
-                        <li class = "mobile-dropdown-item">
-                            <a href="#">Culture</a>
-                        </li>
-                        <li class = "mobile-dropdown-item">
-                            <a href="#">Entertainment</a>
-                        </li>
-                    </ul>
+                </li>
                 <li class = 'mobile-main-menu-item'><a href="#">Games</a>
                     <ul class = 'mobile-dropdown-menu'>
                         <li class = "mobile-dropdown-item">
@@ -517,8 +568,89 @@
 
 </div>
 
-    <img class = 'logo' src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/300px-Wikipedia-logo-v2.svg.png" alt="This image hasn't been uploaded yet.">
+<div class="content-wrapper">
+    <div class="aside-left">
+        <article>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAABHVJREFUaEPtmXtMFFcUxr/ZdQGRl6xFUBAoyqPahrahMdrERwjbWtuIUeOjiVSjNk1tmxIUiDVqDBCkKGrio42J0QC1UYkiKsa/fCa2VWuTBZF1C5atBQtoeSyvbc6MDvLQWObOnbLO98/uDDtz7++cO9+ccxGyfnndhZdIgg7s5tnWM+zmCYaeYT3DbhYBfUm7WUIH4OgZ1jPsZhHguqQf1HYgf14lXE+1K4mfjsXs1UHcwsoV+HTBn7hwsL4PXECwCWmlsRAMfJi5AXd3upDzXgVaGrsGkKXsjkD0NF8uxNyAfz3bhOKMWhHKy9eIsCkjUXXlH/F48mw/LMsLdy/g79fYYLvWIkLFzwlA1Ds+OLrpnnhsMApIPxMLH/MI1aG5ZLjhdyfyk2/LMB9/G47It0chK9GK7i7JwSxfBGNGyivuAVy23YGLhxrk5Zx5Lg4jPAQc/NKOyguPxPPmMA98XRIDQVCXWfUMi2ZlqUBLk2RWCcmBSP5mvPj91rlmFK2vkQlX7otEVIKPqsSqA98804QfMiWzIq0+8Coi4keJ37s6XMhOsqLtYbd4/IYlAIuzw4Y38HerbLj7s2RW5gmeSC2J7gN0IqcOV488EM/RMk8/Gwdvf6Nq0KpmuMHuRP78XrNK+jwYM1f0Naa6ijbsXnpHBvwgNQTTl40ZnsBl+Q5cPCyZlcEgYF1ZDPyCTANgdi2uguN2u3g+KNITXx3tuwpY0quWYXo+cyxWtDZLz2f0dF+k7IoYdO6XCxtQmueQ/7bmQBTC471Zcsr3Ug34RlkTjmzoNauluRMwJdF/UAhycHJycnTSWx+OxoLNocMLeP9KG+zXJbMiE8ooj4PR9OyXbGFaDX473yz+3uRpQEZ5rFiCspYqGa63O7H9KbOatsSMuWnjnjt3KkCoEHmij9LHYeoiM2tedfalT+U5cKlQMivS2qJJCInxeu7ke3pcyH2/Eg/rO8XfhUR7YW3xpP8/sFhMWKxoe2xWSmb82aGJCJ08UsktBlzLfEn3Nysls02YH4jkDVIZykrMgfevsMF+QzIrEr1//4tcLpe8BeThbUBmeRzok5WYAv9lc2LHgt7Kaii18bVjf+P41j9kPmo0qOFgJabApdvqcLlIqotJQ+l+Olp7kJVkBX2S6BmmZ5mVmAH373wCx3sg9cTQ+ttjW+7hp5JGmZHcmlybhZgBXy9txI8bpS0b0mCNwotOuPZWK/Ysr5Z/Tu9jei+zEDPgvZ9Uo+Zmq2RURgHrT8fCd8zQ96gKFlXh/h2poaCKiyovqsCUignw/ep2FCyskufy2iw/0L6VEvVvKBZuCcWbc0cruaV4LRPgk7l1uFLca1bLd0Yg5l1l+8xUuFABQ95Aol0S2i1RKsXAnc4eZCdVoP2R1Ab6jzVh3Sk2/0mgrSHaInoi6pOpX1YixcBKBtfiWh1Yi6jzHFPPMM9oazGWnmEtos5zTD3DPKOtxVh6hrWIOs8x9QzzjLYWY+kZ1iLqPMfUM8wz2lqMpWdYi6jzHPNfPzPkTH7jCj8AAAAASUVORK5CYII=" alt="This image hasn't been uploaded yet." width="100" height="100">
+            <div class="aside-article-title"> <a href="#"> Mushrooms are no longer on shelves due to a zombie attack </a> </div>
+        </article>
+        <article>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAABHVJREFUaEPtmXtMFFcUxr/ZdQGRl6xFUBAoyqPahrahMdrERwjbWtuIUeOjiVSjNk1tmxIUiDVqDBCkKGrio42J0QC1UYkiKsa/fCa2VWuTBZF1C5atBQtoeSyvbc6MDvLQWObOnbLO98/uDDtz7++cO9+ccxGyfnndhZdIgg7s5tnWM+zmCYaeYT3DbhYBfUm7WUIH4OgZ1jPsZhHguqQf1HYgf14lXE+1K4mfjsXs1UHcwsoV+HTBn7hwsL4PXECwCWmlsRAMfJi5AXd3upDzXgVaGrsGkKXsjkD0NF8uxNyAfz3bhOKMWhHKy9eIsCkjUXXlH/F48mw/LMsLdy/g79fYYLvWIkLFzwlA1Ds+OLrpnnhsMApIPxMLH/MI1aG5ZLjhdyfyk2/LMB9/G47It0chK9GK7i7JwSxfBGNGyivuAVy23YGLhxrk5Zx5Lg4jPAQc/NKOyguPxPPmMA98XRIDQVCXWfUMi2ZlqUBLk2RWCcmBSP5mvPj91rlmFK2vkQlX7otEVIKPqsSqA98804QfMiWzIq0+8Coi4keJ37s6XMhOsqLtYbd4/IYlAIuzw4Y38HerbLj7s2RW5gmeSC2J7gN0IqcOV488EM/RMk8/Gwdvf6Nq0KpmuMHuRP78XrNK+jwYM1f0Naa6ijbsXnpHBvwgNQTTl40ZnsBl+Q5cPCyZlcEgYF1ZDPyCTANgdi2uguN2u3g+KNITXx3tuwpY0quWYXo+cyxWtDZLz2f0dF+k7IoYdO6XCxtQmueQ/7bmQBTC471Zcsr3Ug34RlkTjmzoNauluRMwJdF/UAhycHJycnTSWx+OxoLNocMLeP9KG+zXJbMiE8ooj4PR9OyXbGFaDX473yz+3uRpQEZ5rFiCspYqGa63O7H9KbOatsSMuWnjnjt3KkCoEHmij9LHYeoiM2tedfalT+U5cKlQMivS2qJJCInxeu7ke3pcyH2/Eg/rO8XfhUR7YW3xpP8/sFhMWKxoe2xWSmb82aGJCJ08UsktBlzLfEn3Nysls02YH4jkDVIZykrMgfevsMF+QzIrEr1//4tcLpe8BeThbUBmeRzok5WYAv9lc2LHgt7Kaii18bVjf+P41j9kPmo0qOFgJabApdvqcLlIqotJQ+l+Olp7kJVkBX2S6BmmZ5mVmAH373wCx3sg9cTQ+ttjW+7hp5JGmZHcmlybhZgBXy9txI8bpS0b0mCNwotOuPZWK/Ysr5Z/Tu9jei+zEDPgvZ9Uo+Zmq2RURgHrT8fCd8zQ96gKFlXh/h2poaCKiyovqsCUignw/ep2FCyskufy2iw/0L6VEvVvKBZuCcWbc0cruaV4LRPgk7l1uFLca1bLd0Yg5l1l+8xUuFABQ95Aol0S2i1RKsXAnc4eZCdVoP2R1Ab6jzVh3Sk2/0mgrSHaInoi6pOpX1YixcBKBtfiWh1Yi6jzHFPPMM9oazGWnmEtos5zTD3DPKOtxVh6hrWIOs8x9QzzjLYWY+kZ1iLqPMfUM8wz2lqMpWdYi6jzHPNfPzPkTH7jCj8AAAAASUVORK5CYII=" alt="This image hasn't been uploaded yet." width="100" height="100">
+            <div class="aside-article-title"> <a href="#"> Leonardo Degl'Innocenti is an idiot, the family apologizes </a> </div>
+        </article>
+        <article>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAABHVJREFUaEPtmXtMFFcUxr/ZdQGRl6xFUBAoyqPahrahMdrERwjbWtuIUeOjiVSjNk1tmxIUiDVqDBCkKGrio42J0QC1UYkiKsa/fCa2VWuTBZF1C5atBQtoeSyvbc6MDvLQWObOnbLO98/uDDtz7++cO9+ccxGyfnndhZdIgg7s5tnWM+zmCYaeYT3DbhYBfUm7WUIH4OgZ1jPsZhHguqQf1HYgf14lXE+1K4mfjsXs1UHcwsoV+HTBn7hwsL4PXECwCWmlsRAMfJi5AXd3upDzXgVaGrsGkKXsjkD0NF8uxNyAfz3bhOKMWhHKy9eIsCkjUXXlH/F48mw/LMsLdy/g79fYYLvWIkLFzwlA1Ds+OLrpnnhsMApIPxMLH/MI1aG5ZLjhdyfyk2/LMB9/G47It0chK9GK7i7JwSxfBGNGyivuAVy23YGLhxrk5Zx5Lg4jPAQc/NKOyguPxPPmMA98XRIDQVCXWfUMi2ZlqUBLk2RWCcmBSP5mvPj91rlmFK2vkQlX7otEVIKPqsSqA98804QfMiWzIq0+8Coi4keJ37s6XMhOsqLtYbd4/IYlAIuzw4Y38HerbLj7s2RW5gmeSC2J7gN0IqcOV488EM/RMk8/Gwdvf6Nq0KpmuMHuRP78XrNK+jwYM1f0Naa6ijbsXnpHBvwgNQTTl40ZnsBl+Q5cPCyZlcEgYF1ZDPyCTANgdi2uguN2u3g+KNITXx3tuwpY0quWYXo+cyxWtDZLz2f0dF+k7IoYdO6XCxtQmueQ/7bmQBTC471Zcsr3Ug34RlkTjmzoNauluRMwJdF/UAhycHJycnTSWx+OxoLNocMLeP9KG+zXJbMiE8ooj4PR9OyXbGFaDX473yz+3uRpQEZ5rFiCspYqGa63O7H9KbOatsSMuWnjnjt3KkCoEHmij9LHYeoiM2tedfalT+U5cKlQMivS2qJJCInxeu7ke3pcyH2/Eg/rO8XfhUR7YW3xpP8/sFhMWKxoe2xWSmb82aGJCJ08UsktBlzLfEn3Nysls02YH4jkDVIZykrMgfevsMF+QzIrEr1//4tcLpe8BeThbUBmeRzok5WYAv9lc2LHgt7Kaii18bVjf+P41j9kPmo0qOFgJabApdvqcLlIqotJQ+l+Olp7kJVkBX2S6BmmZ5mVmAH373wCx3sg9cTQ+ttjW+7hp5JGmZHcmlybhZgBXy9txI8bpS0b0mCNwotOuPZWK/Ysr5Z/Tu9jei+zEDPgvZ9Uo+Zmq2RURgHrT8fCd8zQ96gKFlXh/h2poaCKiyovqsCUignw/ep2FCyskufy2iw/0L6VEvVvKBZuCcWbc0cruaV4LRPgk7l1uFLca1bLd0Yg5l1l+8xUuFABQ95Aol0S2i1RKsXAnc4eZCdVoP2R1Ab6jzVh3Sk2/0mgrSHaInoi6pOpX1YixcBKBtfiWh1Yi6jzHFPPMM9oazGWnmEtos5zTD3DPKOtxVh6hrWIOs8x9QzzjLYWY+kZ1iLqPMfUM8wz2lqMpWdYi6jzHPNfPzPkTH7jCj8AAAAASUVORK5CYII=" alt="This image hasn't been uploaded yet." width="100" height="100">
+            <div class="aside-article-title"> <a href="#"> Leonardo Da Vinci found dead in a supermarket. Trump: "A great American weapon engineer" </a> </div>
+        </article>
+        <article>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAABHVJREFUaEPtmXtMFFcUxr/ZdQGRl6xFUBAoyqPahrahMdrERwjbWtuIUeOjiVSjNk1tmxIUiDVqDBCkKGrio42J0QC1UYkiKsa/fCa2VWuTBZF1C5atBQtoeSyvbc6MDvLQWObOnbLO98/uDDtz7++cO9+ccxGyfnndhZdIgg7s5tnWM+zmCYaeYT3DbhYBfUm7WUIH4OgZ1jPsZhHguqQf1HYgf14lXE+1K4mfjsXs1UHcwsoV+HTBn7hwsL4PXECwCWmlsRAMfJi5AXd3upDzXgVaGrsGkKXsjkD0NF8uxNyAfz3bhOKMWhHKy9eIsCkjUXXlH/F48mw/LMsLdy/g79fYYLvWIkLFzwlA1Ds+OLrpnnhsMApIPxMLH/MI1aG5ZLjhdyfyk2/LMB9/G47It0chK9GK7i7JwSxfBGNGyivuAVy23YGLhxrk5Zx5Lg4jPAQc/NKOyguPxPPmMA98XRIDQVCXWfUMi2ZlqUBLk2RWCcmBSP5mvPj91rlmFK2vkQlX7otEVIKPqsSqA98804QfMiWzIq0+8Coi4keJ37s6XMhOsqLtYbd4/IYlAIuzw4Y38HerbLj7s2RW5gmeSC2J7gN0IqcOV488EM/RMk8/Gwdvf6Nq0KpmuMHuRP78XrNK+jwYM1f0Naa6ijbsXnpHBvwgNQTTl40ZnsBl+Q5cPCyZlcEgYF1ZDPyCTANgdi2uguN2u3g+KNITXx3tuwpY0quWYXo+cyxWtDZLz2f0dF+k7IoYdO6XCxtQmueQ/7bmQBTC471Zcsr3Ug34RlkTjmzoNauluRMwJdF/UAhycHJycnTSWx+OxoLNocMLeP9KG+zXJbMiE8ooj4PR9OyXbGFaDX473yz+3uRpQEZ5rFiCspYqGa63O7H9KbOatsSMuWnjnjt3KkCoEHmij9LHYeoiM2tedfalT+U5cKlQMivS2qJJCInxeu7ke3pcyH2/Eg/rO8XfhUR7YW3xpP8/sFhMWKxoe2xWSmb82aGJCJ08UsktBlzLfEn3Nysls02YH4jkDVIZykrMgfevsMF+QzIrEr1//4tcLpe8BeThbUBmeRzok5WYAv9lc2LHgt7Kaii18bVjf+P41j9kPmo0qOFgJabApdvqcLlIqotJQ+l+Olp7kJVkBX2S6BmmZ5mVmAH373wCx3sg9cTQ+ttjW+7hp5JGmZHcmlybhZgBXy9txI8bpS0b0mCNwotOuPZWK/Ysr5Z/Tu9jei+zEDPgvZ9Uo+Zmq2RURgHrT8fCd8zQ96gKFlXh/h2poaCKiyovqsCUignw/ep2FCyskufy2iw/0L6VEvVvKBZuCcWbc0cruaV4LRPgk7l1uFLca1bLd0Yg5l1l+8xUuFABQ95Aol0S2i1RKsXAnc4eZCdVoP2R1Ab6jzVh3Sk2/0mgrSHaInoi6pOpX1YixcBKBtfiWh1Yi6jzHFPPMM9oazGWnmEtos5zTD3DPKOtxVh6hrWIOs8x9QzzjLYWY+kZ1iLqPMfUM8wz2lqMpWdYi6jzHPNfPzPkTH7jCj8AAAAASUVORK5CYII=" alt="This image hasn't been uploaded yet." width="100" height="100">
+            <div class="aside-article-title"> <a href="#"> This is the best article ever written by mankind </a> </div>
+            <div class="subscriber-only-tag">Subscriber-only</div>
+        </article>
+        <article>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAABHVJREFUaEPtmXtMFFcUxr/ZdQGRl6xFUBAoyqPahrahMdrERwjbWtuIUeOjiVSjNk1tmxIUiDVqDBCkKGrio42J0QC1UYkiKsa/fCa2VWuTBZF1C5atBQtoeSyvbc6MDvLQWObOnbLO98/uDDtz7++cO9+ccxGyfnndhZdIgg7s5tnWM+zmCYaeYT3DbhYBfUm7WUIH4OgZ1jPsZhHguqQf1HYgf14lXE+1K4mfjsXs1UHcwsoV+HTBn7hwsL4PXECwCWmlsRAMfJi5AXd3upDzXgVaGrsGkKXsjkD0NF8uxNyAfz3bhOKMWhHKy9eIsCkjUXXlH/F48mw/LMsLdy/g79fYYLvWIkLFzwlA1Ds+OLrpnnhsMApIPxMLH/MI1aG5ZLjhdyfyk2/LMB9/G47It0chK9GK7i7JwSxfBGNGyivuAVy23YGLhxrk5Zx5Lg4jPAQc/NKOyguPxPPmMA98XRIDQVCXWfUMi2ZlqUBLk2RWCcmBSP5mvPj91rlmFK2vkQlX7otEVIKPqsSqA98804QfMiWzIq0+8Coi4keJ37s6XMhOsqLtYbd4/IYlAIuzw4Y38HerbLj7s2RW5gmeSC2J7gN0IqcOV488EM/RMk8/Gwdvf6Nq0KpmuMHuRP78XrNK+jwYM1f0Naa6ijbsXnpHBvwgNQTTl40ZnsBl+Q5cPCyZlcEgYF1ZDPyCTANgdi2uguN2u3g+KNITXx3tuwpY0quWYXo+cyxWtDZLz2f0dF+k7IoYdO6XCxtQmueQ/7bmQBTC471Zcsr3Ug34RlkTjmzoNauluRMwJdF/UAhycHJycnTSWx+OxoLNocMLeP9KG+zXJbMiE8ooj4PR9OyXbGFaDX473yz+3uRpQEZ5rFiCspYqGa63O7H9KbOatsSMuWnjnjt3KkCoEHmij9LHYeoiM2tedfalT+U5cKlQMivS2qJJCInxeu7ke3pcyH2/Eg/rO8XfhUR7YW3xpP8/sFhMWKxoe2xWSmb82aGJCJ08UsktBlzLfEn3Nysls02YH4jkDVIZykrMgfevsMF+QzIrEr1//4tcLpe8BeThbUBmeRzok5WYAv9lc2LHgt7Kaii18bVjf+P41j9kPmo0qOFgJabApdvqcLlIqotJQ+l+Olp7kJVkBX2S6BmmZ5mVmAH373wCx3sg9cTQ+ttjW+7hp5JGmZHcmlybhZgBXy9txI8bpS0b0mCNwotOuPZWK/Ysr5Z/Tu9jei+zEDPgvZ9Uo+Zmq2RURgHrT8fCd8zQ96gKFlXh/h2poaCKiyovqsCUignw/ep2FCyskufy2iw/0L6VEvVvKBZuCcWbc0cruaV4LRPgk7l1uFLca1bLd0Yg5l1l+8xUuFABQ95Aol0S2i1RKsXAnc4eZCdVoP2R1Ab6jzVh3Sk2/0mgrSHaInoi6pOpX1YixcBKBtfiWh1Yi6jzHFPPMM9oazGWnmEtos5zTD3DPKOtxVh6hrWIOs8x9QzzjLYWY+kZ1iLqPMfUM8wz2lqMpWdYi6jzHPNfPzPkTH7jCj8AAAAASUVORK5CYII=" alt="This image hasn't been uploaded yet." width="100" height="100">
+            <div class="aside-article-title"> <a href="#"> Esce "Le tristi sorti di un melograno che avvizzisce, pieno di acrimonia" di Ferruccio Canarini in tutte le migliori librerie di Caltanissetta </a> </div>
+        </article>
+        <article>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAABHVJREFUaEPtmXtMFFcUxr/ZdQGRl6xFUBAoyqPahrahMdrERwjbWtuIUeOjiVSjNk1tmxIUiDVqDBCkKGrio42J0QC1UYkiKsa/fCa2VWuTBZF1C5atBQtoeSyvbc6MDvLQWObOnbLO98/uDDtz7++cO9+ccxGyfnndhZdIgg7s5tnWM+zmCYaeYT3DbhYBfUm7WUIH4OgZ1jPsZhHguqQf1HYgf14lXE+1K4mfjsXs1UHcwsoV+HTBn7hwsL4PXECwCWmlsRAMfJi5AXd3upDzXgVaGrsGkKXsjkD0NF8uxNyAfz3bhOKMWhHKy9eIsCkjUXXlH/F48mw/LMsLdy/g79fYYLvWIkLFzwlA1Ds+OLrpnnhsMApIPxMLH/MI1aG5ZLjhdyfyk2/LMB9/G47It0chK9GK7i7JwSxfBGNGyivuAVy23YGLhxrk5Zx5Lg4jPAQc/NKOyguPxPPmMA98XRIDQVCXWfUMi2ZlqUBLk2RWCcmBSP5mvPj91rlmFK2vkQlX7otEVIKPqsSqA98804QfMiWzIq0+8Coi4keJ37s6XMhOsqLtYbd4/IYlAIuzw4Y38HerbLj7s2RW5gmeSC2J7gN0IqcOV488EM/RMk8/Gwdvf6Nq0KpmuMHuRP78XrNK+jwYM1f0Naa6ijbsXnpHBvwgNQTTl40ZnsBl+Q5cPCyZlcEgYF1ZDPyCTANgdi2uguN2u3g+KNITXx3tuwpY0quWYXo+cyxWtDZLz2f0dF+k7IoYdO6XCxtQmueQ/7bmQBTC471Zcsr3Ug34RlkTjmzoNauluRMwJdF/UAhycHJycnTSWx+OxoLNocMLeP9KG+zXJbMiE8ooj4PR9OyXbGFaDX473yz+3uRpQEZ5rFiCspYqGa63O7H9KbOatsSMuWnjnjt3KkCoEHmij9LHYeoiM2tedfalT+U5cKlQMivS2qJJCInxeu7ke3pcyH2/Eg/rO8XfhUR7YW3xpP8/sFhMWKxoe2xWSmb82aGJCJ08UsktBlzLfEn3Nysls02YH4jkDVIZykrMgfevsMF+QzIrEr1//4tcLpe8BeThbUBmeRzok5WYAv9lc2LHgt7Kaii18bVjf+P41j9kPmo0qOFgJabApdvqcLlIqotJQ+l+Olp7kJVkBX2S6BmmZ5mVmAH373wCx3sg9cTQ+ttjW+7hp5JGmZHcmlybhZgBXy9txI8bpS0b0mCNwotOuPZWK/Ysr5Z/Tu9jei+zEDPgvZ9Uo+Zmq2RURgHrT8fCd8zQ96gKFlXh/h2poaCKiyovqsCUignw/ep2FCyskufy2iw/0L6VEvVvKBZuCcWbc0cruaV4LRPgk7l1uFLca1bLd0Yg5l1l+8xUuFABQ95Aol0S2i1RKsXAnc4eZCdVoP2R1Ab6jzVh3Sk2/0mgrSHaInoi6pOpX1YixcBKBtfiWh1Yi6jzHFPPMM9oazGWnmEtos5zTD3DPKOtxVh6hrWIOs8x9QzzjLYWY+kZ1iLqPMfUM8wz2lqMpWdYi6jzHPNfPzPkTH7jCj8AAAAASUVORK5CYII=" alt="This image hasn't been uploaded yet." width="100" height="100">
+            <div class="aside-article-title"> <a href="#"> I don't know what to write. Trump: "Liar!" </a> </div>
+        </article>
+        <article>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAABHVJREFUaEPtmXtMFFcUxr/ZdQGRl6xFUBAoyqPahrahMdrERwjbWtuIUeOjiVSjNk1tmxIUiDVqDBCkKGrio42J0QC1UYkiKsa/fCa2VWuTBZF1C5atBQtoeSyvbc6MDvLQWObOnbLO98/uDDtz7++cO9+ccxGyfnndhZdIgg7s5tnWM+zmCYaeYT3DbhYBfUm7WUIH4OgZ1jPsZhHguqQf1HYgf14lXE+1K4mfjsXs1UHcwsoV+HTBn7hwsL4PXECwCWmlsRAMfJi5AXd3upDzXgVaGrsGkKXsjkD0NF8uxNyAfz3bhOKMWhHKy9eIsCkjUXXlH/F48mw/LMsLdy/g79fYYLvWIkLFzwlA1Ds+OLrpnnhsMApIPxMLH/MI1aG5ZLjhdyfyk2/LMB9/G47It0chK9GK7i7JwSxfBGNGyivuAVy23YGLhxrk5Zx5Lg4jPAQc/NKOyguPxPPmMA98XRIDQVCXWfUMi2ZlqUBLk2RWCcmBSP5mvPj91rlmFK2vkQlX7otEVIKPqsSqA98804QfMiWzIq0+8Coi4keJ37s6XMhOsqLtYbd4/IYlAIuzw4Y38HerbLj7s2RW5gmeSC2J7gN0IqcOV488EM/RMk8/Gwdvf6Nq0KpmuMHuRP78XrNK+jwYM1f0Naa6ijbsXnpHBvwgNQTTl40ZnsBl+Q5cPCyZlcEgYF1ZDPyCTANgdi2uguN2u3g+KNITXx3tuwpY0quWYXo+cyxWtDZLz2f0dF+k7IoYdO6XCxtQmueQ/7bmQBTC471Zcsr3Ug34RlkTjmzoNauluRMwJdF/UAhycHJycnTSWx+OxoLNocMLeP9KG+zXJbMiE8ooj4PR9OyXbGFaDX473yz+3uRpQEZ5rFiCspYqGa63O7H9KbOatsSMuWnjnjt3KkCoEHmij9LHYeoiM2tedfalT+U5cKlQMivS2qJJCInxeu7ke3pcyH2/Eg/rO8XfhUR7YW3xpP8/sFhMWKxoe2xWSmb82aGJCJ08UsktBlzLfEn3Nysls02YH4jkDVIZykrMgfevsMF+QzIrEr1//4tcLpe8BeThbUBmeRzok5WYAv9lc2LHgt7Kaii18bVjf+P41j9kPmo0qOFgJabApdvqcLlIqotJQ+l+Olp7kJVkBX2S6BmmZ5mVmAH373wCx3sg9cTQ+ttjW+7hp5JGmZHcmlybhZgBXy9txI8bpS0b0mCNwotOuPZWK/Ysr5Z/Tu9jei+zEDPgvZ9Uo+Zmq2RURgHrT8fCd8zQ96gKFlXh/h2poaCKiyovqsCUignw/ep2FCyskufy2iw/0L6VEvVvKBZuCcWbc0cruaV4LRPgk7l1uFLca1bLd0Yg5l1l+8xUuFABQ95Aol0S2i1RKsXAnc4eZCdVoP2R1Ab6jzVh3Sk2/0mgrSHaInoi6pOpX1YixcBKBtfiWh1Yi6jzHFPPMM9oazGWnmEtos5zTD3DPKOtxVh6hrWIOs8x9QzzjLYWY+kZ1iLqPMfUM8wz2lqMpWdYi6jzHPNfPzPkTH7jCj8AAAAASUVORK5CYII=" alt="This image hasn't been uploaded yet." width="100" height="100">
+            <div class="aside-article-title"> <a href="#"> Yesterday I watched a great movie with my parents. Trump: "Liar!" </a> </div>
+        </article>
+        <article>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAABHVJREFUaEPtmXtMFFcUxr/ZdQGRl6xFUBAoyqPahrahMdrERwjbWtuIUeOjiVSjNk1tmxIUiDVqDBCkKGrio42J0QC1UYkiKsa/fCa2VWuTBZF1C5atBQtoeSyvbc6MDvLQWObOnbLO98/uDDtz7++cO9+ccxGyfnndhZdIgg7s5tnWM+zmCYaeYT3DbhYBfUm7WUIH4OgZ1jPsZhHguqQf1HYgf14lXE+1K4mfjsXs1UHcwsoV+HTBn7hwsL4PXECwCWmlsRAMfJi5AXd3upDzXgVaGrsGkKXsjkD0NF8uxNyAfz3bhOKMWhHKy9eIsCkjUXXlH/F48mw/LMsLdy/g79fYYLvWIkLFzwlA1Ds+OLrpnnhsMApIPxMLH/MI1aG5ZLjhdyfyk2/LMB9/G47It0chK9GK7i7JwSxfBGNGyivuAVy23YGLhxrk5Zx5Lg4jPAQc/NKOyguPxPPmMA98XRIDQVCXWfUMi2ZlqUBLk2RWCcmBSP5mvPj91rlmFK2vkQlX7otEVIKPqsSqA98804QfMiWzIq0+8Coi4keJ37s6XMhOsqLtYbd4/IYlAIuzw4Y38HerbLj7s2RW5gmeSC2J7gN0IqcOV488EM/RMk8/Gwdvf6Nq0KpmuMHuRP78XrNK+jwYM1f0Naa6ijbsXnpHBvwgNQTTl40ZnsBl+Q5cPCyZlcEgYF1ZDPyCTANgdi2uguN2u3g+KNITXx3tuwpY0quWYXo+cyxWtDZLz2f0dF+k7IoYdO6XCxtQmueQ/7bmQBTC471Zcsr3Ug34RlkTjmzoNauluRMwJdF/UAhycHJycnTSWx+OxoLNocMLeP9KG+zXJbMiE8ooj4PR9OyXbGFaDX473yz+3uRpQEZ5rFiCspYqGa63O7H9KbOatsSMuWnjnjt3KkCoEHmij9LHYeoiM2tedfalT+U5cKlQMivS2qJJCInxeu7ke3pcyH2/Eg/rO8XfhUR7YW3xpP8/sFhMWKxoe2xWSmb82aGJCJ08UsktBlzLfEn3Nysls02YH4jkDVIZykrMgfevsMF+QzIrEr1//4tcLpe8BeThbUBmeRzok5WYAv9lc2LHgt7Kaii18bVjf+P41j9kPmo0qOFgJabApdvqcLlIqotJQ+l+Olp7kJVkBX2S6BmmZ5mVmAH373wCx3sg9cTQ+ttjW+7hp5JGmZHcmlybhZgBXy9txI8bpS0b0mCNwotOuPZWK/Ysr5Z/Tu9jei+zEDPgvZ9Uo+Zmq2RURgHrT8fCd8zQ96gKFlXh/h2poaCKiyovqsCUignw/ep2FCyskufy2iw/0L6VEvVvKBZuCcWbc0cruaV4LRPgk7l1uFLca1bLd0Yg5l1l+8xUuFABQ95Aol0S2i1RKsXAnc4eZCdVoP2R1Ab6jzVh3Sk2/0mgrSHaInoi6pOpX1YixcBKBtfiWh1Yi6jzHFPPMM9oazGWnmEtos5zTD3DPKOtxVh6hrWIOs8x9QzzjLYWY+kZ1iLqPMfUM8wz2lqMpWdYi6jzHPNfPzPkTH7jCj8AAAAASUVORK5CYII=" alt="This image hasn't been uploaded yet." width="100" height="100">
+            <div class="aside-article-title"> <a href="#"> Buongiorno dottore, come vede sono affetto da questo grave difetto. Gaber: "Mi ha rubato l'idea!" </a> </div>
+        </article>
+        <article>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAABHVJREFUaEPtmXtMFFcUxr/ZdQGRl6xFUBAoyqPahrahMdrERwjbWtuIUeOjiVSjNk1tmxIUiDVqDBCkKGrio42J0QC1UYkiKsa/fCa2VWuTBZF1C5atBQtoeSyvbc6MDvLQWObOnbLO98/uDDtz7++cO9+ccxGyfnndhZdIgg7s5tnWM+zmCYaeYT3DbhYBfUm7WUIH4OgZ1jPsZhHguqQf1HYgf14lXE+1K4mfjsXs1UHcwsoV+HTBn7hwsL4PXECwCWmlsRAMfJi5AXd3upDzXgVaGrsGkKXsjkD0NF8uxNyAfz3bhOKMWhHKy9eIsCkjUXXlH/F48mw/LMsLdy/g79fYYLvWIkLFzwlA1Ds+OLrpnnhsMApIPxMLH/MI1aG5ZLjhdyfyk2/LMB9/G47It0chK9GK7i7JwSxfBGNGyivuAVy23YGLhxrk5Zx5Lg4jPAQc/NKOyguPxPPmMA98XRIDQVCXWfUMi2ZlqUBLk2RWCcmBSP5mvPj91rlmFK2vkQlX7otEVIKPqsSqA98804QfMiWzIq0+8Coi4keJ37s6XMhOsqLtYbd4/IYlAIuzw4Y38HerbLj7s2RW5gmeSC2J7gN0IqcOV488EM/RMk8/Gwdvf6Nq0KpmuMHuRP78XrNK+jwYM1f0Naa6ijbsXnpHBvwgNQTTl40ZnsBl+Q5cPCyZlcEgYF1ZDPyCTANgdi2uguN2u3g+KNITXx3tuwpY0quWYXo+cyxWtDZLz2f0dF+k7IoYdO6XCxtQmueQ/7bmQBTC471Zcsr3Ug34RlkTjmzoNauluRMwJdF/UAhycHJycnTSWx+OxoLNocMLeP9KG+zXJbMiE8ooj4PR9OyXbGFaDX473yz+3uRpQEZ5rFiCspYqGa63O7H9KbOatsSMuWnjnjt3KkCoEHmij9LHYeoiM2tedfalT+U5cKlQMivS2qJJCInxeu7ke3pcyH2/Eg/rO8XfhUR7YW3xpP8/sFhMWKxoe2xWSmb82aGJCJ08UsktBlzLfEn3Nysls02YH4jkDVIZykrMgfevsMF+QzIrEr1//4tcLpe8BeThbUBmeRzok5WYAv9lc2LHgt7Kaii18bVjf+P41j9kPmo0qOFgJabApdvqcLlIqotJQ+l+Olp7kJVkBX2S6BmmZ5mVmAH373wCx3sg9cTQ+ttjW+7hp5JGmZHcmlybhZgBXy9txI8bpS0b0mCNwotOuPZWK/Ysr5Z/Tu9jei+zEDPgvZ9Uo+Zmq2RURgHrT8fCd8zQ96gKFlXh/h2poaCKiyovqsCUignw/ep2FCyskufy2iw/0L6VEvVvKBZuCcWbc0cruaV4LRPgk7l1uFLca1bLd0Yg5l1l+8xUuFABQ95Aol0S2i1RKsXAnc4eZCdVoP2R1Ab6jzVh3Sk2/0mgrSHaInoi6pOpX1YixcBKBtfiWh1Yi6jzHFPPMM9oazGWnmEtos5zTD3DPKOtxVh6hrWIOs8x9QzzjLYWY+kZ1iLqPMfUM8wz2lqMpWdYi6jzHPNfPzPkTH7jCj8AAAAASUVORK5CYII=" alt="This image hasn't been uploaded yet." width="100" height="100">
+            <div class="aside-article-title"> <a href="#"> Un'idea, un concetto, un'idea... Gaber: "E che cavolo, continua a rubarmi i testi!" </a> </div>
+        </article>
+        <div class="sponsored-content"> <h3> SPONSORED CONTENT </h3> </div>
+        <article class="sponsored-article">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAABHVJREFUaEPtmXtMFFcUxr/ZdQGRl6xFUBAoyqPahrahMdrERwjbWtuIUeOjiVSjNk1tmxIUiDVqDBCkKGrio42J0QC1UYkiKsa/fCa2VWuTBZF1C5atBQtoeSyvbc6MDvLQWObOnbLO98/uDDtz7++cO9+ccxGyfnndhZdIgg7s5tnWM+zmCYaeYT3DbhYBfUm7WUIH4OgZ1jPsZhHguqQf1HYgf14lXE+1K4mfjsXs1UHcwsoV+HTBn7hwsL4PXECwCWmlsRAMfJi5AXd3upDzXgVaGrsGkKXsjkD0NF8uxNyAfz3bhOKMWhHKy9eIsCkjUXXlH/F48mw/LMsLdy/g79fYYLvWIkLFzwlA1Ds+OLrpnnhsMApIPxMLH/MI1aG5ZLjhdyfyk2/LMB9/G47It0chK9GK7i7JwSxfBGNGyivuAVy23YGLhxrk5Zx5Lg4jPAQc/NKOyguPxPPmMA98XRIDQVCXWfUMi2ZlqUBLk2RWCcmBSP5mvPj91rlmFK2vkQlX7otEVIKPqsSqA98804QfMiWzIq0+8Coi4keJ37s6XMhOsqLtYbd4/IYlAIuzw4Y38HerbLj7s2RW5gmeSC2J7gN0IqcOV488EM/RMk8/Gwdvf6Nq0KpmuMHuRP78XrNK+jwYM1f0Naa6ijbsXnpHBvwgNQTTl40ZnsBl+Q5cPCyZlcEgYF1ZDPyCTANgdi2uguN2u3g+KNITXx3tuwpY0quWYXo+cyxWtDZLz2f0dF+k7IoYdO6XCxtQmueQ/7bmQBTC471Zcsr3Ug34RlkTjmzoNauluRMwJdF/UAhycHJycnTSWx+OxoLNocMLeP9KG+zXJbMiE8ooj4PR9OyXbGFaDX473yz+3uRpQEZ5rFiCspYqGa63O7H9KbOatsSMuWnjnjt3KkCoEHmij9LHYeoiM2tedfalT+U5cKlQMivS2qJJCInxeu7ke3pcyH2/Eg/rO8XfhUR7YW3xpP8/sFhMWKxoe2xWSmb82aGJCJ08UsktBlzLfEn3Nysls02YH4jkDVIZykrMgfevsMF+QzIrEr1//4tcLpe8BeThbUBmeRzok5WYAv9lc2LHgt7Kaii18bVjf+P41j9kPmo0qOFgJabApdvqcLlIqotJQ+l+Olp7kJVkBX2S6BmmZ5mVmAH373wCx3sg9cTQ+ttjW+7hp5JGmZHcmlybhZgBXy9txI8bpS0b0mCNwotOuPZWK/Ysr5Z/Tu9jei+zEDPgvZ9Uo+Zmq2RURgHrT8fCd8zQ96gKFlXh/h2poaCKiyovqsCUignw/ep2FCyskufy2iw/0L6VEvVvKBZuCcWbc0cruaV4LRPgk7l1uFLca1bLd0Yg5l1l+8xUuFABQ95Aol0S2i1RKsXAnc4eZCdVoP2R1Ab6jzVh3Sk2/0mgrSHaInoi6pOpX1YixcBKBtfiWh1Yi6jzHFPPMM9oazGWnmEtos5zTD3DPKOtxVh6hrWIOs8x9QzzjLYWY+kZ1iLqPMfUM8wz2lqMpWdYi6jzHPNfPzPkTH7jCj8AAAAASUVORK5CYII=" alt="This image hasn't been uploaded yet." width="100" height="100">
+            <div class="aside-article-title"> <a href="#"> Esce "Le tristi sorti di un melograno che avvizzisce, pieno di acrimonia" di Ferruccio Canarini in tutte le migliori librerie di Caltanissetta </a> </div>
+        </article>
+    </div>
+    <div class="middle">
+        <div class="breaking-news">
+            <article>
+                <div class="breaking-article-title"> <a href="#"> Leonardo Da Vinci found dead in a supermarket. Trump: "A great American weapon engineer" </a> </div>
+                <img src="https://placehold.co/600x400" alt="This image hasn't been uploaded yet.">
+                <div class="meta"> By <a class="author"> Duffy Duck </a> - <a class="publisher"> Il Corriere delle Stampe </a> </div>
+                <p> Ci sono tantissime cose che potrei scrivere, ma non mi viene in mente niente. Mannaggia, avrei avuto l'occasione di scrivere
+                un capolavoro e invece niente. Un'occasione persa. Persa nel vento, come il suono del mare al ritorno da una vacanza estiva. Ecco,
+                questa cosa è vagamente poetica. </p>
+            </article>
+        </div>
+        <div class="recent-news">
+            <article>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAABHVJREFUaEPtmXtMFFcUxr/ZdQGRl6xFUBAoyqPahrahMdrERwjbWtuIUeOjiVSjNk1tmxIUiDVqDBCkKGrio42J0QC1UYkiKsa/fCa2VWuTBZF1C5atBQtoeSyvbc6MDvLQWObOnbLO98/uDDtz7++cO9+ccxGyfnndhZdIgg7s5tnWM+zmCYaeYT3DbhYBfUm7WUIH4OgZ1jPsZhHguqQf1HYgf14lXE+1K4mfjsXs1UHcwsoV+HTBn7hwsL4PXECwCWmlsRAMfJi5AXd3upDzXgVaGrsGkKXsjkD0NF8uxNyAfz3bhOKMWhHKy9eIsCkjUXXlH/F48mw/LMsLdy/g79fYYLvWIkLFzwlA1Ds+OLrpnnhsMApIPxMLH/MI1aG5ZLjhdyfyk2/LMB9/G47It0chK9GK7i7JwSxfBGNGyivuAVy23YGLhxrk5Zx5Lg4jPAQc/NKOyguPxPPmMA98XRIDQVCXWfUMi2ZlqUBLk2RWCcmBSP5mvPj91rlmFK2vkQlX7otEVIKPqsSqA98804QfMiWzIq0+8Coi4keJ37s6XMhOsqLtYbd4/IYlAIuzw4Y38HerbLj7s2RW5gmeSC2J7gN0IqcOV488EM/RMk8/Gwdvf6Nq0KpmuMHuRP78XrNK+jwYM1f0Naa6ijbsXnpHBvwgNQTTl40ZnsBl+Q5cPCyZlcEgYF1ZDPyCTANgdi2uguN2u3g+KNITXx3tuwpY0quWYXo+cyxWtDZLz2f0dF+k7IoYdO6XCxtQmueQ/7bmQBTC471Zcsr3Ug34RlkTjmzoNauluRMwJdF/UAhycHJycnTSWx+OxoLNocMLeP9KG+zXJbMiE8ooj4PR9OyXbGFaDX473yz+3uRpQEZ5rFiCspYqGa63O7H9KbOatsSMuWnjnjt3KkCoEHmij9LHYeoiM2tedfalT+U5cKlQMivS2qJJCInxeu7ke3pcyH2/Eg/rO8XfhUR7YW3xpP8/sFhMWKxoe2xWSmb82aGJCJ08UsktBlzLfEn3Nysls02YH4jkDVIZykrMgfevsMF+QzIrEr1//4tcLpe8BeThbUBmeRzok5WYAv9lc2LHgt7Kaii18bVjf+P41j9kPmo0qOFgJabApdvqcLlIqotJQ+l+Olp7kJVkBX2S6BmmZ5mVmAH373wCx3sg9cTQ+ttjW+7hp5JGmZHcmlybhZgBXy9txI8bpS0b0mCNwotOuPZWK/Ysr5Z/Tu9jei+zEDPgvZ9Uo+Zmq2RURgHrT8fCd8zQ96gKFlXh/h2poaCKiyovqsCUignw/ep2FCyskufy2iw/0L6VEvVvKBZuCcWbc0cruaV4LRPgk7l1uFLca1bLd0Yg5l1l+8xUuFABQ95Aol0S2i1RKsXAnc4eZCdVoP2R1Ab6jzVh3Sk2/0mgrSHaInoi6pOpX1YixcBKBtfiWh1Yi6jzHFPPMM9oazGWnmEtos5zTD3DPKOtxVh6hrWIOs8x9QzzjLYWY+kZ1iLqPMfUM8wz2lqMpWdYi6jzHPNfPzPkTH7jCj8AAAAASUVORK5CYII=" alt="This image hasn't been uploaded yet." width="100" height="100">
+                <div class="recent-article-title"> <a href="#"> Belen confessa: "Non mi piacciono le caramelle alla menta" </a> </div>
+                <div class="meta"> By <a class="author"> Graziano Melliconi </a> - <a class="publisher"> SuperGossip6000 </a> </div>
+            </article>
+            <article>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAABHVJREFUaEPtmXtMFFcUxr/ZdQGRl6xFUBAoyqPahrahMdrERwjbWtuIUeOjiVSjNk1tmxIUiDVqDBCkKGrio42J0QC1UYkiKsa/fCa2VWuTBZF1C5atBQtoeSyvbc6MDvLQWObOnbLO98/uDDtz7++cO9+ccxGyfnndhZdIgg7s5tnWM+zmCYaeYT3DbhYBfUm7WUIH4OgZ1jPsZhHguqQf1HYgf14lXE+1K4mfjsXs1UHcwsoV+HTBn7hwsL4PXECwCWmlsRAMfJi5AXd3upDzXgVaGrsGkKXsjkD0NF8uxNyAfz3bhOKMWhHKy9eIsCkjUXXlH/F48mw/LMsLdy/g79fYYLvWIkLFzwlA1Ds+OLrpnnhsMApIPxMLH/MI1aG5ZLjhdyfyk2/LMB9/G47It0chK9GK7i7JwSxfBGNGyivuAVy23YGLhxrk5Zx5Lg4jPAQc/NKOyguPxPPmMA98XRIDQVCXWfUMi2ZlqUBLk2RWCcmBSP5mvPj91rlmFK2vkQlX7otEVIKPqsSqA98804QfMiWzIq0+8Coi4keJ37s6XMhOsqLtYbd4/IYlAIuzw4Y38HerbLj7s2RW5gmeSC2J7gN0IqcOV488EM/RMk8/Gwdvf6Nq0KpmuMHuRP78XrNK+jwYM1f0Naa6ijbsXnpHBvwgNQTTl40ZnsBl+Q5cPCyZlcEgYF1ZDPyCTANgdi2uguN2u3g+KNITXx3tuwpY0quWYXo+cyxWtDZLz2f0dF+k7IoYdO6XCxtQmueQ/7bmQBTC471Zcsr3Ug34RlkTjmzoNauluRMwJdF/UAhycHJycnTSWx+OxoLNocMLeP9KG+zXJbMiE8ooj4PR9OyXbGFaDX473yz+3uRpQEZ5rFiCspYqGa63O7H9KbOatsSMuWnjnjt3KkCoEHmij9LHYeoiM2tedfalT+U5cKlQMivS2qJJCInxeu7ke3pcyH2/Eg/rO8XfhUR7YW3xpP8/sFhMWKxoe2xWSmb82aGJCJ08UsktBlzLfEn3Nysls02YH4jkDVIZykrMgfevsMF+QzIrEr1//4tcLpe8BeThbUBmeRzok5WYAv9lc2LHgt7Kaii18bVjf+P41j9kPmo0qOFgJabApdvqcLlIqotJQ+l+Olp7kJVkBX2S6BmmZ5mVmAH373wCx3sg9cTQ+ttjW+7hp5JGmZHcmlybhZgBXy9txI8bpS0b0mCNwotOuPZWK/Ysr5Z/Tu9jei+zEDPgvZ9Uo+Zmq2RURgHrT8fCd8zQ96gKFlXh/h2poaCKiyovqsCUignw/ep2FCyskufy2iw/0L6VEvVvKBZuCcWbc0cruaV4LRPgk7l1uFLca1bLd0Yg5l1l+8xUuFABQ95Aol0S2i1RKsXAnc4eZCdVoP2R1Ab6jzVh3Sk2/0mgrSHaInoi6pOpX1YixcBKBtfiWh1Yi6jzHFPPMM9oazGWnmEtos5zTD3DPKOtxVh6hrWIOs8x9QzzjLYWY+kZ1iLqPMfUM8wz2lqMpWdYi6jzHPNfPzPkTH7jCj8AAAAASUVORK5CYII=" alt="This image hasn't been uploaded yet." width="100" height="100">
+                <div class="recent-article-title"> <a href="#"> Il cognato della sorella del vincitore del Grande Fratello confessa: "Preferisco il calcio al tennis" </a> </div>
+                <div class="meta"> By <a class="author"> Graziano Melliconi </a> - <a class="publisher"> SuperGossip6000 </a> </div>
+            </article>
+            <article>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAABHVJREFUaEPtmXtMFFcUxr/ZdQGRl6xFUBAoyqPahrahMdrERwjbWtuIUeOjiVSjNk1tmxIUiDVqDBCkKGrio42J0QC1UYkiKsa/fCa2VWuTBZF1C5atBQtoeSyvbc6MDvLQWObOnbLO98/uDDtz7++cO9+ccxGyfnndhZdIgg7s5tnWM+zmCYaeYT3DbhYBfUm7WUIH4OgZ1jPsZhHguqQf1HYgf14lXE+1K4mfjsXs1UHcwsoV+HTBn7hwsL4PXECwCWmlsRAMfJi5AXd3upDzXgVaGrsGkKXsjkD0NF8uxNyAfz3bhOKMWhHKy9eIsCkjUXXlH/F48mw/LMsLdy/g79fYYLvWIkLFzwlA1Ds+OLrpnnhsMApIPxMLH/MI1aG5ZLjhdyfyk2/LMB9/G47It0chK9GK7i7JwSxfBGNGyivuAVy23YGLhxrk5Zx5Lg4jPAQc/NKOyguPxPPmMA98XRIDQVCXWfUMi2ZlqUBLk2RWCcmBSP5mvPj91rlmFK2vkQlX7otEVIKPqsSqA98804QfMiWzIq0+8Coi4keJ37s6XMhOsqLtYbd4/IYlAIuzw4Y38HerbLj7s2RW5gmeSC2J7gN0IqcOV488EM/RMk8/Gwdvf6Nq0KpmuMHuRP78XrNK+jwYM1f0Naa6ijbsXnpHBvwgNQTTl40ZnsBl+Q5cPCyZlcEgYF1ZDPyCTANgdi2uguN2u3g+KNITXx3tuwpY0quWYXo+cyxWtDZLz2f0dF+k7IoYdO6XCxtQmueQ/7bmQBTC471Zcsr3Ug34RlkTjmzoNauluRMwJdF/UAhycHJycnTSWx+OxoLNocMLeP9KG+zXJbMiE8ooj4PR9OyXbGFaDX473yz+3uRpQEZ5rFiCspYqGa63O7H9KbOatsSMuWnjnjt3KkCoEHmij9LHYeoiM2tedfalT+U5cKlQMivS2qJJCInxeu7ke3pcyH2/Eg/rO8XfhUR7YW3xpP8/sFhMWKxoe2xWSmb82aGJCJ08UsktBlzLfEn3Nysls02YH4jkDVIZykrMgfevsMF+QzIrEr1//4tcLpe8BeThbUBmeRzok5WYAv9lc2LHgt7Kaii18bVjf+P41j9kPmo0qOFgJabApdvqcLlIqotJQ+l+Olp7kJVkBX2S6BmmZ5mVmAH373wCx3sg9cTQ+ttjW+7hp5JGmZHcmlybhZgBXy9txI8bpS0b0mCNwotOuPZWK/Ysr5Z/Tu9jei+zEDPgvZ9Uo+Zmq2RURgHrT8fCd8zQ96gKFlXh/h2poaCKiyovqsCUignw/ep2FCyskufy2iw/0L6VEvVvKBZuCcWbc0cruaV4LRPgk7l1uFLca1bLd0Yg5l1l+8xUuFABQ95Aol0S2i1RKsXAnc4eZCdVoP2R1Ab6jzVh3Sk2/0mgrSHaInoi6pOpX1YixcBKBtfiWh1Yi6jzHFPPMM9oazGWnmEtos5zTD3DPKOtxVh6hrWIOs8x9QzzjLYWY+kZ1iLqPMfUM8wz2lqMpWdYi6jzHPNfPzPkTH7jCj8AAAAASUVORK5CYII=" alt="This image hasn't been uploaded yet." width="100" height="100">
+                <div class="recent-article-title"> <a href="#"> Non ci sono più le mezze stagioni </a> </div>
+                <div class="meta"> By <a class="author"> James Bond Bond </a> - <a class="publisher"> Il Corriere delle Stampe </a> </div>
+            </article>
+            <article>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAABHVJREFUaEPtmXtMFFcUxr/ZdQGRl6xFUBAoyqPahrahMdrERwjbWtuIUeOjiVSjNk1tmxIUiDVqDBCkKGrio42J0QC1UYkiKsa/fCa2VWuTBZF1C5atBQtoeSyvbc6MDvLQWObOnbLO98/uDDtz7++cO9+ccxGyfnndhZdIgg7s5tnWM+zmCYaeYT3DbhYBfUm7WUIH4OgZ1jPsZhHguqQf1HYgf14lXE+1K4mfjsXs1UHcwsoV+HTBn7hwsL4PXECwCWmlsRAMfJi5AXd3upDzXgVaGrsGkKXsjkD0NF8uxNyAfz3bhOKMWhHKy9eIsCkjUXXlH/F48mw/LMsLdy/g79fYYLvWIkLFzwlA1Ds+OLrpnnhsMApIPxMLH/MI1aG5ZLjhdyfyk2/LMB9/G47It0chK9GK7i7JwSxfBGNGyivuAVy23YGLhxrk5Zx5Lg4jPAQc/NKOyguPxPPmMA98XRIDQVCXWfUMi2ZlqUBLk2RWCcmBSP5mvPj91rlmFK2vkQlX7otEVIKPqsSqA98804QfMiWzIq0+8Coi4keJ37s6XMhOsqLtYbd4/IYlAIuzw4Y38HerbLj7s2RW5gmeSC2J7gN0IqcOV488EM/RMk8/Gwdvf6Nq0KpmuMHuRP78XrNK+jwYM1f0Naa6ijbsXnpHBvwgNQTTl40ZnsBl+Q5cPCyZlcEgYF1ZDPyCTANgdi2uguN2u3g+KNITXx3tuwpY0quWYXo+cyxWtDZLz2f0dF+k7IoYdO6XCxtQmueQ/7bmQBTC471Zcsr3Ug34RlkTjmzoNauluRMwJdF/UAhycHJycnTSWx+OxoLNocMLeP9KG+zXJbMiE8ooj4PR9OyXbGFaDX473yz+3uRpQEZ5rFiCspYqGa63O7H9KbOatsSMuWnjnjt3KkCoEHmij9LHYeoiM2tedfalT+U5cKlQMivS2qJJCInxeu7ke3pcyH2/Eg/rO8XfhUR7YW3xpP8/sFhMWKxoe2xWSmb82aGJCJ08UsktBlzLfEn3Nysls02YH4jkDVIZykrMgfevsMF+QzIrEr1//4tcLpe8BeThbUBmeRzok5WYAv9lc2LHgt7Kaii18bVjf+P41j9kPmo0qOFgJabApdvqcLlIqotJQ+l+Olp7kJVkBX2S6BmmZ5mVmAH373wCx3sg9cTQ+ttjW+7hp5JGmZHcmlybhZgBXy9txI8bpS0b0mCNwotOuPZWK/Ysr5Z/Tu9jei+zEDPgvZ9Uo+Zmq2RURgHrT8fCd8zQ96gKFlXh/h2poaCKiyovqsCUignw/ep2FCyskufy2iw/0L6VEvVvKBZuCcWbc0cruaV4LRPgk7l1uFLca1bLd0Yg5l1l+8xUuFABQ95Aol0S2i1RKsXAnc4eZCdVoP2R1Ab6jzVh3Sk2/0mgrSHaInoi6pOpX1YixcBKBtfiWh1Yi6jzHFPPMM9oazGWnmEtos5zTD3DPKOtxVh6hrWIOs8x9QzzjLYWY+kZ1iLqPMfUM8wz2lqMpWdYi6jzHPNfPzPkTH7jCj8AAAAASUVORK5CYII=" alt="This image hasn't been uploaded yet." width="100" height="100">
+                <div class="recent-article-title"> <a href="#"> Fra Beethoven e Sinatra preferisco l'insalata </a> </div>
+                <div class="meta"> By <a class="author"> Bond James Bond </a> - <a class="publisher"> Franco Battiato </a> </div>
+            </article>
+        </div>
+    </div>
+    <div class="aside-right">
 
+    </div>
+</div>
 
     <div class = "filler">
 
