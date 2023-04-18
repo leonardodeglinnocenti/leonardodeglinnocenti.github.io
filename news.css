@@ -374,6 +374,8 @@ body {
     width: 90%; /*Adds margin*/
 }
 
+/* FIRST COLUMN: aside-left */
+
 .aside-left {
     grid-column: 1;
     padding: 1em;
@@ -426,6 +428,8 @@ body {
 .subscriber-only-tag{
     display: none;
 }
+
+/* SECOND COLUMN: middle */
 
 .middle{
     grid-column: 2;
@@ -612,6 +616,10 @@ body {
 }
 
 fieldset{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
     border: none;
     padding: 0;
 }
