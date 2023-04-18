@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 .title-bar {
     display: flex;
     margin: auto;
@@ -114,6 +118,7 @@
     margin-bottom: 10px;
     height: max-content;
     box-shadow: 0 2px 3px rgba(0,0,0,.4); /* Adds a discrete shadow under the navbar */
+    z-index: 9999999; /*Moves the element in the foreground*/
 }
 
 .navbar.sticky { /* Combined with navbar_always_visible.js allows the navbar to always be visible when scrolling */
@@ -375,17 +380,17 @@
     border-right: grey 1px solid;
 }
 
-.aside-left article{
+.aside-article{
     display: flex;
     flex-direction: row;
     margin-bottom: 1em;
 }
 
-.aside-left img{
+.aside-article img{
     margin-right: 1em;
 }
 
-.aside-left a{
+.aside-article-title a{
     text-decoration: none;
     color: black;
     font-size: 20px;
@@ -394,7 +399,7 @@
     line-height: 1.2;
 }
 
-.aside-left a:hover{
+.aside-article a:hover{
     text-decoration: underline;
 }
 
@@ -407,8 +412,15 @@
 }
 
 .sponsored-article{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1em;
     padding: 1em;
     background-color: #e7e7e7;
+}
+
+.sponsored-article img{
+    margin-right: 1em;
 }
 
 .subscriber-only-tag{
@@ -583,16 +595,16 @@
     padding: 1em;
 }
 
-.aside-right article{
+.category-article{
     margin-bottom: 1em;
 }
 
-.aside-right img{
+.category-article img{
     float: left;
     margin-right: 1em;
 }
 
-.aside-article-title a{
+.category-article-title a{
     text-decoration: none;
     color: black;
     font-size: 20px;
@@ -601,7 +613,7 @@
     line-height: 1.2;
 }
 
-.aside-article-title a:hover{
+.category-article a:hover{
     text-decoration: underline;
 }
 
@@ -624,6 +636,201 @@
 .filler {
     height: 10px;
 }
+
+.topic-title{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.topic-title h2{
+    height: 55px;
+    line-height: 55px; /*Necessary to center text*/
+    position: relative;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: Montserrat,Helmet,Freesans,sans-serif;
+    font-weight: bold;
+    color: white;
+    padding-left: 115px;
+    background-color: #9ea7b3;
+}
+
+.topic-title h2 img{
+    position: absolute;
+    left: 10px;
+    top: -25px;
+}
+
+.topic-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%; /*Maximum width*/
+    margin-left: auto; /*Center container*/
+    margin-right: auto;
+}
+
+.topic-box {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    width: 268px;
+}
+
+.topic-box-title a{
+    font-size: 22px;
+    line-height: 1.4;
+    text-decoration-line: none;
+    color: black;
+    font-family: Montserrat,Helmet,Freesans,sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.topic-box-title a:hover{
+    text-decoration: underline;
+}
+
+.topic-box-content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.topic-news-title{
+    margin-bottom: 1em;
+    font-size: 18px;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    text-decoration-line: none;
+    color: black;
+    padding: 0 0 9px 0;
+    border-bottom: lightgray 2px solid;
+}
+
+.topic-news-title:nth-child(1){
+    font-weight: bold;
+}
+
+.topic-news-title:hover{
+    text-decoration: underline;
+}
+
+.footer-menu-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%; /*Maximum width*/
+    margin-left: auto; /*Center container*/
+    margin-right: auto;
+}
+
+.menu-box {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    width: 268px;
+}
+
+.menu-box-title a{
+    font-size: 22px;
+    line-height: 1.4;
+    text-decoration-line: none;
+    color: #a9091f;
+    font-family: Montserrat,Helmet,Freesans,sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.menu-box-title a:hover{
+    text-decoration: underline;
+}
+
+.menu-box-content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.menu-box-item{
+    margin-bottom: 6px;
+    font-size: 22px;
+    font-style: normal;
+    font-family: Signika,Helmet,Freesans,sans-serif;
+    text-decoration-line: none;
+    font-weight: 400;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: black;
+}
+
+.menu-box-item:hover{
+    text-decoration: underline;
+}
+
+.footer{
+    border-top: 11px solid #ccc;
+    background-color: #f5f5f5;
+}
+
+.footer-inline-menu{
+    display: flex;
+    /*Overflow must trigger elements to go on more than one line*/
+    flex-wrap: wrap;
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+
+.footer-inline-menu a{
+    text-decoration: none;
+    color: #b00021; /* Main menu items color */
+    font-weight: bold;
+    font-family: Montserrat,Helmet,Freesans,sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 1px solid black;
+    /*Force text on one line*/
+    white-space: nowrap;
+}
+
+.footer-inline-menu a:hover{
+    /* Underlines text when mouse is hovering */
+    text-decoration: revert;
+}
+
+.footer-inline-menu div:nth-child(1) a {
+    border-left: none;
+}
+
+.last-thing-to-do{
+    padding: 10px;
+    text-align: center;
+    color: black; /* Main menu items color */
+    font-family: Montserrat,Helmet,Freesans,sans-serif;
+}
+
+@media screen and (max-width: 1200px) {
+    .content-wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        margin: 2em auto 2em auto;
+    }
+    .aside-right{
+        grid-column: 2;
+    }
+    .middle{
+        border-right: 0;
+    }
+}
+
 /* Hide navbar for small screens */
 @media screen and (max-width: 1000px) { /*This breakpoint avoids navbar to be shown on two lines*/
     .navbar {
@@ -632,16 +839,41 @@
     .mobile-menu {
         display: flex;
     }
-    .content-wrapper {
-        width: 100%;
-    }
     .users-menu {
         display: none;
     }
-    .fill{ /*Allows the logo to be centered again*/
+    .fill{ /*Allows the logo to be centered again, when the users menu disappears*/
         display: none;
     }
+    .content-wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 2em auto 2em auto;
+    }
+    .aside-left{
+        grid-column: unset;
+        border-right: 0;
+    }
+    .middle{
+        grid-column: unset;
+    }
+    .aside-right{
+        grid-column: unset;
+    }
 }
+
+@media screen and (max-width: 700px) {
+    .podcast-element{
+        display: flex;
+        flex-direction: column;
+    }
+    .logo img{
+        width: 82%; /*Allows a smooth transition*/
+        height: auto;
+    }
+}
+
 @media screen and (min-width: 1000px) { /*Close mobile menu when enlarging window*/
     .mobile-navbar {
         display: none;
